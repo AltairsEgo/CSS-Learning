@@ -1,0 +1,27 @@
+#mainH1{
+    font-family: "Baskerville", serif;
+    color: white;
+    background-color: black;
+    text-transform: uppercase;
+}
+
+#motivationalImage{
+    border: 5px solid white;
+    width: 100%;
+
+}
+
+#mainDiv{
+    width: 50%;
+    margin: 5% 0 0 25%;
+}
+
+#motivationalText{
+    color: olive;
+}
+
+html{
+    background-color: cyan;
+    text-align: center;
+}
+
