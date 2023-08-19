@@ -9,30 +9,57 @@
   <style>
     body {
       font-family: 'Sono', sans-serif;
+      /* line-height: 40px; */
     }
-    .pricing-container {
+    .pricing-container{
       display: flex;
-      margin-top: 33%;
       justify-content: center;
-      align-content: center;
-      gap: 30px;
+      align-items: center;
+      height: 100vh;
+      gap: 2rem;
     }
-    .pricing-container > .pricing-plan {
+
+    /* Boxes */
+    .pricing-plan {
+      flex: 1;
+      max-width: 400px;
       background-color: lightgray;
+      padding: 20px;
+      text-align: center;
+      border-radius: 5px;
     }
 
-    .pricing-container > .pricing-plan > .plan-price{
-      font-size: 2rem;
-      font-weight: bold;
-    }
-
-    .pricing-container > .pricing-plan > .plan-title{
+    .plan-title{
+      margin-bottom: 10px;
+      font-size: 24px;
       font-weight: 600;
     }
 
-    .pricing-container > .pricing-plan > .plan-button{
-      display: flex;
+    .plan-price{
+      font-size: 48px;
+      font-weight: bolder;
+      margin-bottom: 10px;
+    }
+    
+    .plan-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
 
+    .plan-button{
+      border: 0;
+      border-radius: 5px;
+      padding: 3%;
+      margin-top: 10px;
+      background-color: darkorange;
+      color: white;
+      margin-bottom: 20px;
+
+    }
+
+    .plan-features li{
+      margin-bottom: 20px;
     }
 
 
@@ -40,9 +67,12 @@
     @media (max-width: 1250px) {
       .pricing-container{
         flex-direction: column;
-        flex-wrap: wrap;
-        align-content: center;
+        height:100%; 
       }
+      .pricing-plan{
+        width: 100%;
+      }
+      
     }
   </style>
 </head>
@@ -51,7 +81,7 @@
   <div class="pricing-container">
     <div class="pricing-plan">
       <div class="plan-title">Basic</div>
-      <div class="plan-price">$9.99/month</div>
+      <div class="plan-price">$1.99/month</div>
       <ul class="plan-features">
         <li>✅ 10GB Storage</li>
         <li>✅ 1 User</li>
