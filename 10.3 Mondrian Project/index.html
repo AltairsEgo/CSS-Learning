@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    body{
+    
+    }
+    .flexbox-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .main-grid-container{
+      background-color: black;
+      display: grid;
+      height: 748px;
+      width: 748px;
+      /* border: solid darkcyan; */
+      grid-template-rows: 414px 130px 157px 20px;
+      grid-template-columns: 320px 360px 50px;
+      gap: 9px;
+    }
+
+    .right-side-container{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 130px 186px;
+      /* border-bottom: solid black 10px; */
+      gap: 9px;
+    }
+
+    .bottom-grid-container{
+      display: grid;
+      grid-column: 2;
+      grid-row: 4;
+      grid-template-columns: 198px 153px;
+      gap: 9px;
+
+    }
+
+    .white.rectangle.middle.left{
+      grid-row-start: 2;
+      grid-row-end: 4;
+    }
+
+    .white.rectangle.middle.right{
+      background-color: #F0F1EC;
+      grid-column-start: 2;
+      grid-row-start: 2;
+      grid-row-end: 4;
+    }
+
+    .white.rectangle.lower.left.edge{
+      grid-row-start: 4;
+    }
+
+    .white.rectangle.upper.right{
+      grid-column: span 2;
+    }
+
+    
+
+    .darkblue.rectangle.lower.right{
+      background-color: #004592;
+      border-bottom: solid black 10px;
+    }
+
+
+    .yellow{
+      background-color: #F9D01E;
+    }
+    .black.rectangle{
+      background-color: #232629;
+    }
+    .red{
+      background-color: #E72F24;
+    }
+
+    .white{
+      background-color: #F0F1EC;
+    }
+    
+
+  </style>
+</head>
+
+<body>
+  <!-- Write your HTML here -->
+  <div class="flexbox-container">
+    <div class="main-grid-container">
+      <div class="red rectangle left"></div>
+      <div class="white rectangle upper right"></div>
+      <div class="white rectangle middle left"></div>
+      <div class="white rectangle middle right"></div>
+      <div class="right-side-container">
+        <div class="darkblue rectangle lower right"></div>
+        <div class="white rectangle lower right corner"></div>
+      </div>
+      <div class="white rectangle lower left edge"></div>
+      <div class="bottom-grid-container">
+        <div class="yellow rectangle lower right edge"></div>
+        <div class="black rectangle lower right edge"></div>
+      </div>
+    </div>
+   
+
+  </div>
+</body>
+
+</html>
