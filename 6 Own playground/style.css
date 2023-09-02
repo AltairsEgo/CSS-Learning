@@ -1,3 +1,12 @@
+.para-container{
+    display: flex;
+}
+
+#border-test{
+    flex-shrink: 2;
+    flex-basis: 200px;
+}
+
 p {
     background-color: green;
 }
