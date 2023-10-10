@@ -1,24 +1,26 @@
 import React from "react";
-import { characterStats } from "./character-stats";
 import { CharacterDetails } from "./types";
 import styles from "./CharacterItem.module.css";
 import { characterSheetFields } from "./character-sheet-fields";
 
-const CharacterItem: React.FC<CharacterDetails> = ({ ...characterStats }) => {
+const CharacterItem: React.FC<CharacterDetails> = ({
+  characterName,
+  dexterity,
+  strength,
+  constitution,
+}) => {
   return (
     <React.Fragment>
       <div className={styles.characterItemContainer}>
         <p className={styles.characterName}>
-          {characterSheetFields.Name + characterStats.characterName}
+          {characterSheetFields.Name + characterName}
         </p>
         <div className={styles.characterPortrait}></div>
         <div className={styles.abilityScores}>
           <span>
-            <p>{characterSheetFields.Dexterity + characterStats.dexterity}</p>
-            <p>{characterSheetFields.Strength + characterStats.strength}</p>
-            <p>
-              {characterSheetFields.Constituion + characterStats.constitution}
-            </p>
+            <p>{characterSheetFields.Dexterity + dexterity}</p>
+            <p>{characterSheetFields.Strength + strength}</p>
+            <p>{characterSheetFields.Constituion + constitution}</p>
           </span>
         </div>
       </div>
